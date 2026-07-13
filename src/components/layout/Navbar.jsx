@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
-import {MdOutlineShoppingCart, MdMenu, MdOutlineClose} from "react-icons/md";
 import { useState } from "react";
+import { useCart } from "../../context/CartContext.jsx";
+import {MdOutlineShoppingCart, MdMenu, MdOutlineClose} from "react-icons/md";
 
 function Navbar() {
 	const [open, setOpen] = useState(false);
+	const { totalItems } = useCart();
+
 	return (
 		<nav className="bg-white shadow-md">
 			<div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
@@ -16,7 +19,15 @@ function Navbar() {
 					<Link to="/products">Productos</Link>
 					<Link to="/login">Login</Link>
 					<Link to="/cart" className="flex items-center gap-1">
-						<MdOutlineShoppingCart size={20}/>Carrito
+					<div className="relative flex items-center">
+						<MdOutlineShoppingCart size={20}/>
+						{totalItems > 0 && (
+							<span className="absolute -top-2 -right-3 bg-red-500 text-white rounded-full w-5 h-5 items-center justify-center text-xs">
+								{totalItems}
+							</span>
+						)}
+					</div>
+					<span>Carrito</span>
 					</Link>
 				</div>
 			</div>
