@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import authService from "../services/authService.js";
+import logger from "../utils/logger.js";
 
 const AuthContext = createContext();
 export function AuthProvider ({ children }) {
@@ -28,16 +29,18 @@ export function AuthProvider ({ children }) {
 	const login = ({ user, accessToken }) => {
 		localStorage.setItem("accessToken", accessToken);
 		setUser(user);
+		logger.success("Usuario autenticado", user);
 	};
 
 	const logout = async () => {
 		try {
 			await authService.logout();
 		} catch (error) {
-			console.error(error);
+			logger.error(error);
 		}
 		localStorage.removeItem("accessToken");
 		setUser(null);
+		logger.info("Sesión cerrada");
 	};
 
 	return (
