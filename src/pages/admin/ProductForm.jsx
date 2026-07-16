@@ -45,7 +45,18 @@ function ProductForm({ product = null, onSuccess, onCancel }) {
 				<input type="number" placeholder="Stock" value={stock} onChange={(e)=>setStock(e.target.value)}
 				className="w-full border rounded p-2" required />
 				<input type="file" accept="image/*" onChange={(e)=>setImage(e.target.value)}
-				className="w-full" />
+				className="w-full hover:font-semibold cursor-pointer" />
+
+				{product?.image && (
+					<div className="mt-4">
+						<p className="text-sm text-gray-600 mb-2">Imagen actual
+							<img src={product.image.startsWith("http") ? product.image :
+								`${import.meta.env.VITE_API_URL.replace("/api", "")}/uploads/${product.image}`
+							} alt={product.name} className="w-40 h-40 object-cover rounded-lg border" />
+						</p>
+					</div>
+				)}
+
 				<div className="flex gap-4">
 					<button type="submit" className="bg-green-600 hover:bg-green-800 text-white font-semibold px-5 py-2 rounded cursor-pointer">Guardar</button>
 					<button type="button" onClick={onCancel} className="bg-gray-500 hover:bg-gray-700 text-white font-semibold px-5 py-2 rounded cursor-pointer">Cancelar</button>
