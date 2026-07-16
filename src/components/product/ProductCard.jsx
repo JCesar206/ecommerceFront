@@ -1,9 +1,11 @@
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useCart } from "../../context/CartContext.jsx";
+import formatCurrency from "../../utils/formatCurrency.js";
 
 function ProductCard({ product }) {
 	const { addToCart } = useCart();
-	const imageUrl = product.image.startWith("http") ? product.image : `${import.meta.env.VITE_API_URL.replace("/api", "")}/${product.image}`;
+	const imageUrl = product.image ? ( product.image.startsWith("http") ? product.image :
+	`${import.meta.env.VITE_API_URL.replace("/api", "")}/uploads/${product.image}`) : "/no-image.png";
 
 	return (
 		<article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
@@ -16,7 +18,7 @@ function ProductCard({ product }) {
 				<p className="text-gray-500 text-sm mt-2">{product.description}</p>
 					<div className="flex justify-between items-center mt-4">
 						<span className="text-2xl font-bold text-blue-600">
-							${Number(product.price).toFixed(2)}
+							{formatCurrency(product.price)}
 						</span>
 						<span className="text-sm text-gray-500">{product.stock}</span>
 					</div>
