@@ -5,13 +5,13 @@ import logger from "../utils/logger.js";
 const AuthContext = createContext();
 export function AuthProvider ({ children }) {
 	const [user, setUser] = useState(null);
-	const [loadingg, loading] = useState(true);
+	const [loading, setLoading] = useState(true);
 	useEffect(() => {
 		const loadUser = async () => {
 			try {
 				const token = localStorage.getItem("accessToken");
 				if (!token) {
-					loading(false);
+					setLoading(false);
 					return;
 				}
 				const response = await authService.me();
@@ -20,7 +20,7 @@ export function AuthProvider ({ children }) {
 				localStorage.removeItem("accessToken");
 				setUser(null);
 			} finally {
-				loading(false);
+				setLoading(false);
 			}
 		};
 		loadUser();
@@ -44,7 +44,7 @@ export function AuthProvider ({ children }) {
 	};
 
 	return (
-		<AuthContext.Provider value={{user, loadingg, login, logout}}>
+		<AuthContext.Provider value={{user, loading, login, logout}}>
 			{children}
 		</AuthContext.Provider>
 	);
