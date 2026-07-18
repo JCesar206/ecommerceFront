@@ -1,10 +1,18 @@
+import Hero from "../components/common/Hero.jsx";
+import FeaturedProducts from "../components/home/FeaturedProducts.jsx";
+import Features from "../components/home/Features.jsx";
+import Categories from "../components/home/Categories.jsx";
+import CTA from "../components/home/CTA.jsx";
+
 function Home() {
 	return (
-		<div className="min-h-screen flex items-center justify-center">
-			<h1 className="text-4xl font-bold">
-				Bienvenido a Ecommerce FullStack
-			</h1>
-		</div>
+		<>
+			<Hero/>
+			<FeaturedProducts/>
+			<Features/>
+			<Categories/>
+			<CTA/>
+		</>
 	);
 }
 
