@@ -51,12 +51,12 @@ function Navbar() {
 
 			<div className="flex items-center gap-3">
 				<button onClick={toggleTheme}
-				className="dark:text-white hover:text-blue-600 transition cursor-pointer">
+				className="dark:text-white hover:text-blue-600 transition cursor-pointer" title={t("navbar","theme")}>
 					{darkMode ? <FaRegSun size={18}/> : <FaRegMoon size={18}/>}
 				</button>
 
 				<button onClick={toggleLanguage}
-					className="px-3 py-1 border dark:border-gray-600 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition cursor-pointer">
+					className="px-3 py-1 border dark:border-gray-600 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition cursor-pointer" title={t("navbar","language")}>
 						{language.toUpperCase()}
 				</button>
 			</div>
