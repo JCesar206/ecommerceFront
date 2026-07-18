@@ -1,7 +1,11 @@
+import { useLanguage } from "../../context/LanguageContext.jsx";
+
 function SearchBar({ value, onChange }) {
+	const { language, toggleLanguage, t} = useLanguage();
+
 	return (
 		<div className="mb-8">
-			<input type="text" placeholder="Buscar productos..." value={value} onChange={onChange}
+			<input type="text" placeholder={t("search","searchProducts")} value={value} onChange={onChange}
 				className="w-full border rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"/>
 		</div>
 	);
