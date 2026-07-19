@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useLanguage } from "../../context/LanguageContext.jsx";
+import { useLanguage } from "../context/LanguageContext.jsx";
 import authService from "../services/authService.js";
 
 function Register() {
