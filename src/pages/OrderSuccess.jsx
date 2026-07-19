@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { MdCheckCircleOutline } from "react-icons/md";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../context/LanguageContext.jsx";
+import generateOrderNumber from "../utils/generateOrderNumber.js";
 
 function OrderSuccess() {
 	const { t } = useLanguage();
-	const orderNumber = `DEV-${Date.now().toString().slice(-6)}`;
+	const orderNumber = generateOrderNumber();
 
 	return (
 		<div className="max-w-3xl mx-auto py-20 px-4 text-center">
