@@ -79,6 +79,25 @@ const texts = {
 			password: "Contraseña",
 			registering: "Registrando"
 		},
+		checkout: {
+			name: "Nombre completo",
+			email: "Correo electrónico",
+			phone: "Teléfono",
+			address: "Dirección",
+			city: "Ciudad",
+			zipCode: "Código Postal",
+			confirm: "Confirmar compra",
+			card: "Tarjeta de crédito o débito",
+			paypal: "PayPal",
+			bank: "Transferencia bancaria",
+			paymentMethod: "Método de pago",
+			summary: "Resumen del pedido",
+			securePayment: "Pago 100% seguro",
+			fastShipping: "Envío rápido",
+			warranty: "Garantía de calidad",
+			clear: "Limpiar",
+			title: "Verificar"
+		},
 		admin: {
 			title: "Productos",
 			adminPanel: "Panel administrados",
@@ -172,6 +191,25 @@ const texts = {
 			email: "Email",
 			password: "Password",
 			registering: "Registering"
+		},
+		checkout: {
+			name: "Full name",
+			email: "Email",
+			phone: "Phone",
+			address: "Address",
+			city: "City",
+			zipCode: "ZIP Code",
+			confirm: "Confirm purcharse",
+			card: "Card",
+			paypal: "Paypal",
+			bank: "Bank transfer",
+			paymentMethod: "Payment method",
+			summary: "Order summary",
+			securePayment: "100% Secure payment",
+			fastShipping: "Fast shipping",
+			warranty: "Quality warranty",
+			clear: "Clear",
+			checkout: "Checkout"
 		},
 		admin: {
 			title: "Products",
