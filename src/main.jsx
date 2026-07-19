@@ -5,6 +5,7 @@ import { CartProvider } from "./context/CartContext.jsx";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
 import { LanguageProvider } from "./context/LanguageContext.jsx";
 import ErrorBoundary from "./components/common/ErrorBoundary.jsx";
+import { Toaster } from "react-hot-toast";
 import App from "./App.jsx";
 import "./index.css";
 
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")).render(
           <LanguageProvider>
             <CartProvider>
               <App/>
+              <Toaster position="top-right" reverseOrder={false} />
             </CartProvider>
           </LanguageProvider>
         </ThemeProvider>
