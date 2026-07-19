@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, UNSAFE_getTurboStreamSingleFetchDataStrategy } from "react-router-dom";
+import { Link } from "react-router-dom";
 import productService from "../../services/productService.js";
 import ProductCard from "../product/ProductCard.jsx";
 import { useLanguage } from "../../context/LanguageContext";
