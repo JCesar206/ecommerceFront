@@ -10,6 +10,9 @@ import ProtectedRoute from "./ProtectedRoute.jsx";
 import AdminRoute from "./AdminRoute.jsx";
 import AdminDashboard from "../pages/admin/AdminDashboard.jsx";
 import AdminProducts from "../pages/admin/AdminProducts.jsx";
+import NotFound from "../pages/NotFound.jsx";
+import Checkout from "../pages/Checkout.jsx";
+import OrderSuccess from "../pages/OrderSuccess.jsx";
 
 function AppRouter() {
 	return (
@@ -35,6 +38,18 @@ function AppRouter() {
 						<AdminRoute>
 							<AdminProducts />
 						</AdminRoute>
+					} />
+					<Route path="*" element={<NotFound />} />
+					<Route path="/checkout" element={
+						<ProtectedRoute>
+							<Checkout />
+						</ProtectedRoute>
+					}
+					/>
+					<Route path="/order-success" element={
+						<ProtectedRoute>
+							<OrderSuccess />
+						</ProtectedRoute>
 					} />
 				</Route>
 			</Routes>
