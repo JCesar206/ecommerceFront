@@ -3,11 +3,13 @@ import productService from "../services/productService.js";
 import ProductCard from "../components/product/ProductCard.jsx";
 import ProductGrid from "../components/product/ProductGrid.jsx";
 import SearchBar from "../components/product/SearchBar.jsx";
+import { useLanguage } from "../context/LanguageContext.jsx";
 
 function Products() {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
 	const [loading, setLoading] = useState(true);
+	const { language, toggleLanguage, t} = useLanguage();
 
 	useEffect(() => {
 		const loadProducts = async () => {
@@ -29,13 +31,13 @@ function Products() {
 	}, [products, search]);
 	if (loading) {
 		return (
-			<div className="text-center mt-20 text-xl">Cargando productos...</div>
+			<div className="text-center mt-20 text-xl">{t("products","loadingProducts")}</div>
 		);
 	}
 
 	return (
 		<div className="max-w-7xl mx-auto px-4 py-8">
-			<h1 className="text-4xl font-bold mb-6">Productos</h1>
+			<h1 className="text-4xl font-bold mb-6">{t("products","title")}</h1>
 			<SearchBar value={search} onChange={(e)=>setSearch(e.target.value)}/>
 				<ProductGrid>
 					{filteredProducts.map(product => (
