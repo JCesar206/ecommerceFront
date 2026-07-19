@@ -1,18 +1,20 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../../context/LanguageContext.jsx";
 import authService from "../services/authService.js";
 
 function Register() {
 	const navigate = useNavigate();
-	const [loading, setLoading] = useState(false);
+	const [loading, setloading] = useState(false);
 	const [form, setForm] = useState({name: "", email: "", password: ""});
+	const { language, toggleLanguage, t} = useLanguage();
 	const handleChange = (e) => {
 		setForm({...form, [e.target.name]: e.target.value});
 	};
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		setLoading(true);
+		loading(true);
 		try {
 			await authService.register(form);
 			alert("Usuario registrado correctamente");
@@ -20,22 +22,22 @@ function Register() {
 		} catch (error) {
 			alert(error.response?.data?.message || "Error al registrar usuario");
 		} finally {
-			setLoading(false);
+			loading(false);
 		}
 	};
 
 	return (
 		<div className="max-w-md mx-auto mt-16">
-			<h1 className="text-3xl font-bold mb-8">Crear cuenta</h1>
+			<h1 className="text-3xl font-bold mb-8">{t("register","createAccount")}</h1>
 			<form onSubmit={handleSubmit} className="space-y-5">
-				<input type="text" name="name" placeholder="Nombre" value={form.name}
+				<input type="text" name="name" placeholder={t("register","name")} value={form.name}
 				onChange={handleChange} className="w-full border rounded-lg p-3" required />
-				<input type="email" name="email" placeholder="Correo electrónico" value={form.email}
+				<input type="email" name="email" placeholder={t("register","email")} value={form.email}
 				onChange={handleChange} className="w-full border rounded-lg p-3" required />
-				<input type="password" name="password" placeholder="Contraseña" value={form.password}
+				<input type="password" name="password" placeholder={t("register","password")} value={form.password}
 				onChange={handleChange} className="w-full border rounded-lg p-3" required />
-				<button disabled={loading} className="w-full bg-green-600 hover:bg-green-800 text-white font-semibold py-3 rounded-ls cursor-pointer">
-					{loadin ? "Registrando..." : "Crear cuenta"}
+				<button disabled={loading} className="w-full bg-green-600 hover:bg-green-800 text-white font-semibold py-3 rounded cursor-pointer">
+					{loading ? t("register","registering") : t("register","createAccount")}
 				</button>
 			</form>
 		</div>
