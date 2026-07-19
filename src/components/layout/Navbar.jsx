@@ -35,9 +35,11 @@ function Navbar() {
 	};
 	
 	return (
-		<nav className="bg-white dark:bg-gray-900 shadow-md">
-			<div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-				<Link to="/" className="text-2xl font-bold dark:text-white hover:text-blue-600 transition">
+		<nav className="bg-white dark:bg-gray-900 shadow-md transition-colors duration-300">
+			<div
+			className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center transition-colors duration-300">
+				<Link to="/"
+				className="text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 transition">
 					<span className="text-blue-600">Dev</span>Shop
 				</Link>
 
@@ -47,28 +49,28 @@ function Navbar() {
 
 				<div ref={menuRef} className={`${open ? "flex" : "hidden"}
 				md:flex flex-col md:flex-row md:items-center md:justify-between md:flex-1 
-				gap-4 absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent md:dark:bg-transparent p-4 md:p-0 md:ml-10`}>
+				gap-4 absolute md:static top-16 left-0 w-full md:w-auto bg-white dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent p-4 md:p-0 md:ml-10`}>
 
 			<div className="flex items-center gap-3">
 				<button onClick={toggleTheme}
-				className="dark:text-white hover:text-blue-600 transition cursor-pointer" title={t("navbar","theme")}>
+				className="text-gray-600 dark:text-gray-200 hover:text-blue-600 transition cursor-pointer" title={t("navbar","theme")}>
 					{darkMode ? <FaRegSun size={18}/> : <FaRegMoon size={18}/>}
 				</button>
 
 				<button onClick={toggleLanguage}
-					className="px-3 py-1 border dark:border-gray-600 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition cursor-pointer" title={t("navbar","language")}>
+					className="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition cursor-pointer" title={t("navbar","language")}>
 						{language.toUpperCase()}
 				</button>
 			</div>
 			
 				<div className="flex flex-col md:flex-row items-center gap-4">
 					<Link onClick={closeMenu} to="/"
-						className="dark:text-white hover:text-blue-600 transition">
+						className="text-gray-700 dark:text-gray-200 hover:text-blue-600 transition">
 							{t("navbar","home")}
 					</Link>
 
 					<Link onClick={closeMenu} to="/products"
-						className="dark:text-white hover:text-blue-600 transition">
+						className="text-gray-700 dark:text-gray-200 hover:text-blue-600 transition">
 							{t("navbar","products")}
 					</Link>
 					{user ? (
@@ -91,12 +93,12 @@ function Navbar() {
 					) : (
 						<>
 						<Link onClick={closeMenu} to="/login"
-							className="dark:text-white hover:text-blue-600 transition">
+							className="text-gray-700 dark:text-gray-200 hover:text-blue-500 transition">
 								{t("navbar","login")}
 						</Link>
 						
 						<Link onClick={closeMenu} to="/register"
-							className="dark:text-white hover:text-blue-600 transition">
+							className="text-gray-700 dark:text-gray-200 hover:text-blue-500 transition">
 								{t("navbar","register")}
 						</Link>
 						</>
@@ -104,7 +106,7 @@ function Navbar() {
 				</div>	
 
 					<Link onClick={closeMenu} to="/cart" 
-						className="flex items-center gap-1 dark:text-white hover:text-blue-600 transition">
+						className="flex items-center gap-1 text-gray-700 dark:text-gray-200 hover:text-blue-600 transition">
 
 					<div className="relative flex items-center">
 						<MdOutlineShoppingCart size={20}/>
