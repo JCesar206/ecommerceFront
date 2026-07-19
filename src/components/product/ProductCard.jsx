@@ -1,9 +1,11 @@
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useCart } from "../../context/CartContext.jsx";
 import formatCurrency from "../../utils/formatCurrency.js";
+import { useLanguage } from "../../context/LanguageContext.jsx";
 
 function ProductCard({ product }) {
 	const { addToCart } = useCart();
+	const { language, toggleLanguage, t} = useLanguage();
 	const imageUrl = product.image ? ( product.image.startsWith("http") ? product.image :
 	`${import.meta.env.VITE_API_URL.replace("/api", "")}/uploads/${product.image}`) : "/no-image.png";
 
@@ -24,7 +26,7 @@ function ProductCard({ product }) {
 					</div>
 					<button onClick={() => addToCart(product)}
 					className="mt-5 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg flex justify-center items-center gap-2 transition cursor-pointer">
-						<MdOutlineShoppingCart size={18}/>Agregar al carrito
+						<MdOutlineShoppingCart size={18}/>{t("products","addToCart")}
 					</button>
 			</div>
 		</article>
