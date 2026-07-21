@@ -39,7 +39,6 @@ function AppRouter() {
 							<AdminProducts />
 						</AdminRoute>
 					} />
-					<Route path="*" element={<NotFound />} />
 					<Route path="/checkout" element={
 						<ProtectedRoute>
 							<Checkout />
@@ -51,6 +50,7 @@ function AppRouter() {
 							<OrderSuccess />
 						</ProtectedRoute>
 					} />
+					<Route path="*" element={<NotFound />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
