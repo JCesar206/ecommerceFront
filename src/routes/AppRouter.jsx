@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout.jsx";
 import Home from "../pages/Home.jsx";
 import Products from "../pages/Products.jsx";
@@ -15,46 +15,60 @@ import Checkout from "../pages/Checkout.jsx";
 import OrderSuccess from "../pages/OrderSuccess.jsx";
 
 function AppRouter() {
-	return (
-		<BrowserRouter>
-			<Routes>
-				<Route element={<MainLayout/>}>
-					<Route path="/" element={<Home/>} />
-					<Route path="/login" element={<Login/>} /> 
-					<Route path="/products" element={<Products/>} />
-					<Route path="/register" element={<Register/>} />
-					<Route path="/cart" element={<Cart/>} />
-					<Route path="/profile" element={
-						<ProtectedRoute>
-							<Profile />
-						</ProtectedRoute>
-					} />
-					<Route path="/admin" element={
-						<AdminRoute>
-							<AdminDashboard />
-						</AdminRoute>
-					} />
-					<Route path="/admin/products" element={
-						<AdminRoute>
-							<AdminProducts />
-						</AdminRoute>
-					} />
-					<Route path="/checkout" element={
-						<ProtectedRoute>
-							<Checkout />
-						</ProtectedRoute>
-					}
-					/>
-					<Route path="/order-success" element={
-						<ProtectedRoute>
-							<OrderSuccess />
-						</ProtectedRoute>
-					} />
-					<Route path="*" element={<NotFound />} />
-				</Route>
-			</Routes>
-		</BrowserRouter>
-	);
+  return (
+    <HashRouter>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              <AdminRoute>
+                <AdminDashboard />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/admin/products"
+            element={
+              <AdminRoute>
+                <AdminProducts />
+              </AdminRoute>
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              <ProtectedRoute>
+                <Checkout />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/order-success"
+            element={
+              <ProtectedRoute>
+                <OrderSuccess />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </HashRouter>
+  );
 }
 
 export default AppRouter;
