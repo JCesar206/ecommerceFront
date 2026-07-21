@@ -15,7 +15,7 @@ function FeaturedProducts() {
 
 	const loadProducts = async () => {
 		try {
-			const response = await productService.getProductById();
+			const response = await productService.getProducts();
 			setProducts(response.data.slice(0, 4));
 		} catch (error) {
 			console.error(error);
