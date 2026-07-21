@@ -9,13 +9,13 @@ const texts = {
 			loading: "Cargando productos...",
 			featured: "Productos destacados",
 			viewAll: "Ver todos",
-			ctaTitle: "¿Listo para encontrar tu próximo equipo?",
+			ctatitle: "¿Listo para encontrar tu próximo equipo?",
 			ctaDescription: "Explora nuestro catálogo y descubre productos de calidad al mejor precio.",
 			ctaButton: "Ver productos",
 			whyChooseUs: "¿Por qué elegir DevShoop?",
-			shippingTitle: "Envió rápido",
-			securityTitle: "Compra segura",
-			supportTitle: "Supporte 24/7",
+			shippingtitle: "Envió rápido",
+			securitytitle: "Compra segura",
+			supporttitle: "Supporte 24/7",
 			shippingDescription: "Recibe tus productos de forma rápida y segura hasta la puerta de tu hogar.",
 			securityDescription: "Tus pagos están protegidos mediante conexiones seguras y cifrado de datos.",
 			supportDescription: "Nuestro equipo está disponible para ayudarte en cualquier momento.",
@@ -58,7 +58,7 @@ const texts = {
 			checkout: "Verificar",
 			cartEmpty: "Carrito vacío"
 		},
-		NotFound: {
+		notFound: {
 			title: "Página no encontrada",
 			description: "La página que buscas no existe o fue movida.",
 			button: "Volver al inicio"
@@ -118,13 +118,13 @@ const texts = {
 			loading: "Loading products",
 			featured: "Featured products",
 			viewAll: "View all",
-			ctaTitle: "Ready to find your next device?",
+			ctatitle: "Ready to find your next device?",
 			ctaDescription: "Browse our catalog and discover quality products at the best price.",
 			ctaButton: "Browse products",
 			whyChooseUs: "Why choose DevShop?",
-			shippingTitle: "Fast shipping",
-			securityTitle: "Secure shopping",
-			supportTitle: "24/7 Support",
+			shippingtitle: "Fast shipping",
+			securitytitle: "Secure shopping",
+			supporttitle: "24/7 Support",
 			shippingDescription: "Receive your products quickly and safely right at your doorstep.",
 			securityDescription: "Your payments are protected with secure connections and encrypted data.",
 			supportDescription: "Our support team is available to help you anytime.",
@@ -167,7 +167,7 @@ const texts = {
 			checkout: "Checkout",
 			cartEmpty: "Cart empty",
 		},
-		NotFound: {
+		notFound: {
 			title: "Page not found",
 			description: "The page you're looking for doesn't exist or has been moved.",
 			button: "Back to home"

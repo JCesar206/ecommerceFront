@@ -7,17 +7,17 @@ function Features() {
 	const features = [
 		{
 			icon: <MdLocalShipping size={45} />,
-			title: t("home","shippingTitle"),
+			title: t("home","shippingtitle"),
 			description: t("home","shippingDescription"),
 		},
 		{
 			icon: <MdSecurity size={45} />,
-			title: t("home","securityTitle"),
+			title: t("home","securitytitle"),
 			description: t("home","securityDescription"),
 		},
 		{
 			icon: <MdSupportAgent size={45} />,
-			title: t("home","supportTitle"),
+			title: t("home","supporttitle"),
 			description: t("home","supportDescription"),
 		},
 	];
