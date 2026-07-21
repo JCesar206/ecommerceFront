@@ -11,7 +11,19 @@ const texts = {
 			viewAll: "Ver todos",
 			ctaTitle: "¿Listo para encontrar tu próximo equipo?",
 			ctaDescription: "Explora nuestro catálogo y descubre productos de calidad al mejor precio.",
-			ctaButton: "Ver productos"
+			ctaButton: "Ver productos",
+			whyChooseUs: "¿Por qué elegir DevShoop?",
+			shippingTitle: "Envió rápido",
+			securityTitle: "Compra segura",
+			supportTitle: "Supporte 24/7",
+			shippingDescription: "Recibe tus productos de forma rápida y segura hasta la puerta de tu hogar.",
+			securityDescription: "Tus pagos están protegidos mediante conexiones seguras y cifrado de datos.",
+			supportDescription: "Nuestro equipo está disponible para ayudarte en cualquier momento.",
+			categories: "Categorías",
+			laptops: "Laptops",
+			keyboard: "Teclados",
+			mice: "Mouse",
+			audio: "Audio"
 		},
 		navbar: {
 			home: "Inicio",
@@ -46,25 +58,10 @@ const texts = {
 			checkout: "Verificar",
 			cartEmpty: "Carrito vacío"
 		},
-		feature: {
-			whyChooseUs: "¿Por qué elegir DevShop?",
-			shippingTitle: "Envío rápido",
-			shippingDescription: "Recibe tus productos de forma rápida y segura.",
-			securityTitle: "Compra segura",
-			securityDescription: "Tus pagos están protegidos con tecnología segura.",
-			supportTitle: "Soporte 24/7",
-			supportDescription: "Estamos listos para ayudarte cuando lo necesites"
-		},
 		NotFound: {
 			title: "Página no encontrada",
 			description: "La página que buscas no existe o fue movida.",
 			button: "Volver al inicio"
-		},
-		categories: {
-			laptops: "Laptops",
-			keyboards: "Teclados",
-			mice: "Mouse",
-			audio: "Audio"
 		},
 		order: {
 			title: "¡Compra realizada!",
@@ -123,7 +120,19 @@ const texts = {
 			viewAll: "View all",
 			ctaTitle: "Ready to find your next device?",
 			ctaDescription: "Browse our catalog and discover quality products at the best price.",
-			ctaButton: "Browse products"
+			ctaButton: "Browse products",
+			whyChooseUs: "Why choose DevShop?",
+			shippingTitle: "Fast shipping",
+			securityTitle: "Secure shopping",
+			supportTitle: "24/7 Support",
+			shippingDescription: "Receive your products quickly and safely right at your doorstep.",
+			securityDescription: "Your payments are protected with secure connections and encrypted data.",
+			supportDescription: "Our support team is available to help you anytime.",
+			categories: "Categories",
+			laptops: "Laptops",
+			keyboard: "Keyboards",
+			mice: "Mice",
+			audio: "Audio"
 		},
 		navbar: {
 			home: "Home",
@@ -158,26 +167,10 @@ const texts = {
 			checkout: "Checkout",
 			cartEmpty: "Cart empty",
 		},
-		feature: {
-			whyChooseUs: "Why choose DevShop?",
-			shippingTitle: "Fast Shipping",
-			shippingDescription: "Receive your products quickly and safely.",
-			securityTitle: "Secure Shopping",
-			securityDescription: "Your payments are protected with secure technology.",
-			supportTitle: "24/7 Support",
-			supportDescription: "We're ready to help whenever you need us."
-		},
 		NotFound: {
 			title: "Page not found",
 			description: "The page you're looking for doesn't exist or has been moved.",
 			button: "Back to home"
-		},
-		categories: {
-			categories: "Categories",
-			laptops: "Laptops",
-			keyboards: "Keyboards",
-			mice: "Mice",
-			audio: "Audio"
 		},
 		order: {
 			title: "Purcharse completed!",
