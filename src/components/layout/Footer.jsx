@@ -1,6 +1,7 @@
 import { FaLinkedin, FaGithub, FaEnvelope, FaLink } from "react-icons/fa";
 import { useTheme } from "../../context/ThemeContext.jsx";
 import { useLanguage } from "../../context/LanguageContext.jsx";
+import { GiAlienBug } from "react-icons/gi";
 
 function Footer() {
 	const { darkMode } = useTheme();
@@ -26,8 +27,8 @@ function Footer() {
 					</div>
 				</div>
 			<div className="text-center">
-				<p className="text-sm text-center py-2">
-					&copy; {new Date().getFullYear()} {t("footer","title")} | Juls | {t("footer","rights")}
+				<p className="text-sm text-center py-2 hover:text-blue-500 hover:scale-90 transition">
+					&copy; {new Date().getFullYear()} {t("footer","title")} | <GiAlienBug size={18}/> Juls | {t("footer","rights")}
 				</p>
 			</div>
 		</footer>
