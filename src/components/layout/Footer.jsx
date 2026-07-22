@@ -27,7 +27,7 @@ function Footer() {
 					</div>
 				</div>
 			<div className="text-center">
-				<p className="flex items-center gap-2 text-sm text-center py-2 hover:text-blue-500 hover:scale-90 transition">
+				<p className="flex items-center justify-center gap-2 text-sm text-center py-2 hover:text-blue-500 hover:scale-90 transition">
 					&copy; {new Date().getFullYear()} <span>{t("footer","title")}</span> | 
 					<GiAlienBug size={18}/> Juls | <span>{t("footer","rights")}</span>
 				</p>
