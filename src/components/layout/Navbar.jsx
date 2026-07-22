@@ -4,8 +4,10 @@ import { useCart } from "../../context/CartContext.jsx";
 import { useAuth } from "../../context/AuthContext.jsx";
 import { useTheme } from "../../context/ThemeContext.jsx";
 import { useLanguage } from "../../context/LanguageContext.jsx";
-import { MdOutlineShoppingCart, MdMenu, MdOutlineClose } from "react-icons/md";
+import { MdOutlineShoppingCart, MdMenu, MdOutlineClose, MdHome, MdStorefront, MdLogin, MdAppRegistration,
+	MdDashboard, MdLogout } from "react-icons/md";
 import { FaRegSun, FaRegMoon } from "react-icons/fa";
+import { CiFaceSmile } from "react-icons/ci";
 
 function Navbar() {
 	const [open, setOpen] = useState(false);
@@ -53,7 +55,8 @@ function Navbar() {
 
 			<div className="flex items-center gap-3">
 				<button onClick={toggleTheme}
-				className="text-gray-600 dark:text-gray-200 hover:text-blue-600 transition cursor-pointer" title={t("navbar","theme")}>
+				className="text-gray-600 dark:text-gray-200 hover:text-blue-600 transition cursor-pointer" 
+				title={t("navbar","theme")}>
 					{darkMode ? <FaRegSun size={18}/> : <FaRegMoon size={18}/>}
 				</button>
 
@@ -65,41 +68,48 @@ function Navbar() {
 			
 				<div className="flex flex-col md:flex-row items-center gap-4">
 					<Link onClick={closeMenu} to="/"
-						className="text-gray-700 dark:text-gray-200 hover:text-blue-600 transition">
-							{t("navbar","home")}
+						className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 transition">
+							<MdHome size={18}/>
+							<span>{t("navbar","home")}</span>
 					</Link>
 
 					<Link onClick={closeMenu} to="/products"
-						className="text-gray-700 dark:text-gray-200 hover:text-blue-600 transition">
-							{t("navbar","products")}
+						className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 transition">
+							<MdStorefront size={18}/>
+							<span>{t("navbar","products")}</span>
 					</Link>
 					{user ? (
 						<> 
+							<CiFaceSmile size={18} className="font-semibold"/>	
 							<span className="font-medium dark:text-white hover:text-blue-600 transition">
 								{t("navbar","welcome")}, {user.name}
 							</span>
 
 							{user.role === "admin" && (
 								<Link onClick={closeMenu} to="/admin/products"
-								className="dark:text-white hover:text-blue-600 transition">
-									{t("navbar","admin")}
+								className="flex items-center gap-2 dark:text-white hover:text-blue-600 transition">
+									<MdDashboard size={18}/>
+									<span>{t("navbar","admin")}</span>
 								</Link>
 							)}
 							<button onClick={() => {logout(); closeMenu();}}
-							className="text-red-600 hover:text-red-800 cursor-pointer">
-								{t("navbar","logout")}
+							className="flex items-center gap-2 text-red-600 hover:text-red-800 cursor-pointer">
+								<MdLogout size={18}/>
+								<span>{t("navbar","logout")}</span>
 							</button>
 						</>
 					) : (
 						<>
 						<Link onClick={closeMenu} to="/login"
-							className="text-gray-700 dark:text-gray-200 hover:text-blue-500 transition">
-								{t("navbar","login")}
+							className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 transition">
+								<MdLogin size={18}/>
+								<span>{t("navbar","login")}</span>
 						</Link>
 						
 						<Link onClick={closeMenu} to="/register"
-							className="text-gray-700 dark:text-gray-200 hover:text-blue-500 transition">
-								{t("navbar","register")}
+							className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 transition">
+								<MdAppRegistration size={18}/>
+								<span>{t("navbar","register")}</span>
 						</Link>
 						</>
 					)}

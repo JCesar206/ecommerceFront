@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import authService from "../services/authService";
 import { useAuth } from "../context/AuthContext";
 import logger from "../utils/logger.js";
-import { MdVisibility, MdVisibilityOff } from "react-icons/md";
+import { MdVisibility, MdVisibilityOff, MdLogin } from "react-icons/md";
 import { useLanguage } from "../context/LanguageContext.jsx";
 
 function Login() {
@@ -47,12 +47,14 @@ function Login() {
                 </button>
             </div>
 
-            <button disabled={loading} className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg cursor-pointer">
-              {loading ? t("login","loggingIn") : t("login","login")}
+            <button disabled={loading}
+              className="flex items-center gap-2 justify-center w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg cursor-pointer">
+              <MdLogin size={18} />
+              <span>{loading ? t("login","loggingIn") : t("login","login")}</span>
             </button>
               <div className="font-semibold mb-2">
                 <p><strong>Admin:</strong> admin@test.com</p> 
-                <p><strong>Contraseña:</strong> admin123</p>
+                <p><strong>{t("login","password")}:</strong> admin123</p>
               </div>
             </form>
         </div>

@@ -12,7 +12,7 @@ const texts = {
 			ctatitle: "¿Listo para encontrar tu próximo equipo?",
 			ctaDescription: "Explora nuestro catálogo y descubre productos de calidad al mejor precio.",
 			ctaButton: "Ver productos",
-			whyChooseUs: "¿Por qué elegir DevShoop?",
+			whyChooseUs: "¿Por qué elegir DevShop?",
 			shippingtitle: "Envió rápido",
 			securitytitle: "Compra segura",
 			supporttitle: "Supporte 24/7",
@@ -47,7 +47,12 @@ const texts = {
 		products: {
 			title: "Productos",
 			addToCart: "Agregar al carrito",
-			loadingProducts: "Cargando productos..."
+			loadingProducts: "Cargando productos...",
+			currentImage: "Imágen actual",
+			editProduct: "Editar producto",
+			newProduct: "Producto nuevo",
+			save: "Guardar producto",
+			cancel: "Cancelar"
 		},
 		search: {
 			searchProducts: "Buscar productos..."
@@ -104,7 +109,10 @@ const texts = {
 			managerUser: "Administrar usuario",
 			productManager: "Administrador de productos",
 			edit: "Editar",
-			delete: "Eliminar"
+			delete: "Eliminar",
+			name: "Nombre",
+			description: "Descripción",
+			price: "Precio"
 		},
 		footer: {
 			title: "DevShop Comercio Electrónico FullStack",
@@ -156,7 +164,12 @@ const texts = {
 		products: {
 			title: "Products",
 			addToCart: "Add to cart",
-			loadingProducts: "Loading products..."
+			loadingProducts: "Loading products...",
+			currentImage: "Current image",
+			editProduct: "Edit product",
+			newProduct: "New product",
+			save: "Save product",
+			cancel: "Cancel"
 		},
 		search: {
 			searchProducts: "Search products..."
@@ -213,7 +226,10 @@ const texts = {
 			managerUser: "Manager user",
 			productManager: "Product manager",
 			edit: "Edit",
-			delete: "Delete"
+			delete: "Delete",
+			name: "Name",
+			description: "Description",
+			price: "Price"
 		},
 		footer: {
 			title: "DevShop Ecommerce FullStack",
