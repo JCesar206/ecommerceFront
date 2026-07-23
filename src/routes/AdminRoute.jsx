@@ -1,6 +1,6 @@
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
-import { useLanguage } from "../../context/LanguageContext.jsx";
+import { useLanguage } from "../context/LanguageContext.jsx";
 
 function AdminRoute({ children }) {
 	const { language, toggleLanguage, t} = useLanguage();

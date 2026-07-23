@@ -7,7 +7,7 @@ export default function BackToTop() {
 
 	return (
 		<button onClick={handleClick} aria-label="Back to top"
-		className="fixed bottom-34 right-4 z-50 h-12 rounded-full bg-indigo-500 text-white items-center justify-center shadow-lg hover:bg-indigo-700 transition cursor-pointer">
+		className="fixed bottom-6 right-6 z-50 h-12 rounded-full p-3 bg-indigo-500 text-white items-center justify-center shadow-lg hover:bg-indigo-700 transition cursor-pointer">
 			<FaArrowUp size={20} />
 		</button>
 	);

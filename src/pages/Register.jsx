@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import authService from "../services/authService.js";
+import { FaUserPlus } from "react-icons/fa";
 
 function Register() {
 	const navigate = useNavigate();
@@ -31,13 +32,15 @@ function Register() {
 			<h1 className="text-3xl font-bold mb-8">{t("register","createAccount")}</h1>
 			<form onSubmit={handleSubmit} className="space-y-5">
 				<input type="text" name="name" placeholder={t("register","name")} value={form.name}
-				onChange={handleChange} className="w-full border rounded-lg p-3" required />
+				onChange={handleChange} className="w-full border rounded-lg p-3 text-gray-500 dark:text-white" required />
 				<input type="email" name="email" placeholder={t("register","email")} value={form.email}
-				onChange={handleChange} className="w-full border rounded-lg p-3" required />
+				onChange={handleChange} className="w-full border rounded-lg p-3 text-gray-500 dark:text-white" required />
 				<input type="password" name="password" placeholder={t("register","password")} value={form.password}
-				onChange={handleChange} className="w-full border rounded-lg p-3" required />
-				<button disabled={loading} className="w-full bg-green-600 hover:bg-green-800 text-white font-semibold py-3 rounded cursor-pointer">
-					{loading ? t("register","registering") : t("register","createAccount")}
+				onChange={handleChange} className="w-full border rounded-lg p-3 text-gray-500 dark:text-white" required />
+
+				<button disabled={loading} className="flex items-center gap-2 justify-center w-full bg-green-600 hover:bg-green-800 text-white font-semibold py-3 rounded cursor-pointer">
+					<FaUserPlus size={18}/>
+					<span>{loading ? t("register","registering") : t("register","createAccount")}</span>
 				</button>
 			</form>
 		</div>

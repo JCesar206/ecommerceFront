@@ -1,4 +1,5 @@
 import Categories from "../components/home/Categories";
+import BackToTop from "../components/layout/BackToTop";
 import NotFound from "../pages/NotFound";
 
 const texts = {
@@ -23,7 +24,8 @@ const texts = {
 			laptops: "Laptops",
 			keyboard: "Teclados",
 			mice: "Mouse",
-			audio: "Audio"
+			audio: "Audio",
+			BackToTop: "Volver arriba"
 		},
 		navbar: {
 			home: "Inicio",
@@ -116,7 +118,7 @@ const texts = {
 			price: "Precio"
 		},
 		footer: {
-			title: "DevShop Comercio Electrónico FullStack",
+			title: "DevShop Comercio Electrónico FullStack.",
 			rights: "Todos los derechos reservados."
 		}
 	},
@@ -141,7 +143,8 @@ const texts = {
 			laptops: "Laptops",
 			keyboard: "Keyboards",
 			mice: "Mice",
-			audio: "Audio"
+			audio: "Audio",
+			BackToTop: "Back to top"
 		},
 		navbar: {
 			home: "Home",
@@ -234,7 +237,7 @@ const texts = {
 			price: "Price"
 		},
 		footer: {
-			title: "DevShop Ecommerce FullStack",
+			title: "DevShop Ecommerce FullStack.",
 			rights: "All rights reserved."
 		}
 	}
