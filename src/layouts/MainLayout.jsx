@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/layout/Navbar.jsx";
 import Footer from "../components/layout/Footer.jsx";
+import BackToTop from "../components/layout/BackToTop.jsx";
 
 function MainLayout() {
 	return (
@@ -8,6 +9,7 @@ function MainLayout() {
 			<Navbar/>
 			<main className="flex-1">
 				<Outlet/>
+				<BackToTop/>
 			</main>
 			<Footer/>
 		</div>
